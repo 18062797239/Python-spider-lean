@@ -24,11 +24,12 @@ def get_heads():
         {'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15F79/iPhone 6'},\
         {'User-Agent':'Mozilla/5.0 (Linux; U; Android 5.0.0; zh-cn; RNE-AL00 Build/HUAWEIRNE-AL00) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
         {'User-Agent':'Mozilla/5.0 (Linux; U; Android 8.0.0; zh-cn; RNE-AL00 Build/HUAWEIRNE-AL00) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
-        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 7.0.0; zh-cn; RNE-AL00 Build/HUAWEIRNE-AL00) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
+        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 6.0; zh-cn; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
         {'User-Agent':'Mozilla/5.0 (Linux; U; Android 7.1.1; zh-cn; OPPO R11 Build/NMF26X) Apple WebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
-        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 5.2.0; zh-cn; RNE-AL00 Build/HUAWEIRNE-AL00) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
+        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 8.1.0; zh-cn; vivo Y85A Build/OPM1.171019.011) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
         {'User-Agent':'Mozilla/5.0 (Linux; U; Android 5.3.0; zh-cn; RNE-AL00 Build/HUAWEIRNE-AL00) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
-        
+        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 8.1.0; zh-cn; PBAM00 Build/OPM1.171019.026) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
+        {'User-Agent':'Mozilla/5.0 (Linux; U; Android 9; zh-cn; MI 8 Build/PKQ1.180729.001) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1'},\
         {'User-Agent':'Mozilla/5.0 (Linux; U; Android 5.3.1; zh-cn; MI 4S Build/LMY47V) AppleWebKit/537.365 (KHTML, like Gecko) Version/4.0 Chrome/54.0.2785.146 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.1.3'},]
     while rip.is_private:
         rip = ip_address('.'.join(map(str, (random.randint(0, 255) for _ in range(4)))))

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # 日期和时间的字符串辅助函数

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: Zeng YueTian
 # 获得指定城市的小区数据
@@ -6,8 +6,8 @@
 # 日期,所属区县,板块名,小区名,挂牌均价,挂牌数
 # 20180221,浦东,川沙,恒纬家苑,32176元/m2,3套在售二手房
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 import threadpool
 import threading
@@ -23,7 +23,7 @@ from lib.const.spider import thread_pool_size
 def collect_xiaoqu_data(city_name, area_name, fmt="txt"):
     """
     对于每个板块,获得这个板块下所有小区的信息
-    并且将这些信息写入文件保存
+    并且将这些信息写入文件保存 
     :param city_name: 城市
     :param area_name: 板块
     :param fmt: 保存文件格式

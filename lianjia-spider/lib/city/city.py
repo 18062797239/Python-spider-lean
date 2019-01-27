@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # 城市缩写和城市名的映射

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # 获得各城市的区县相关信息
@@ -52,4 +52,4 @@ def get_districts(city,zh=null):
 
 if __name__ == '__main__':
     a = get_districts('hf')
-    print a
+    print(a)

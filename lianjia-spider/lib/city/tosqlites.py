@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # -*- coding:utf-8 -*-  
 """
 @author: YuFei 
@@ -29,7 +29,7 @@ def tosqlite(dbname,date_string,datas):
     '''
 
     tablename = dbname
-    dbname = 'F:\ID\python\sqlite3\lianjia.db'
+    dbname = 'F:\ID\python\sqlpythontestianjia.db'
     con = sqlite3.connect(dbname)
     cur = con.cursor()
     sql = 'INSERT INTO '+tablename+' (area,circle,community,room,size,price,dates) VALUES(?,?,?,?,?,?,?)'

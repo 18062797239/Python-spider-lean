@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # 小区信息的数据结构

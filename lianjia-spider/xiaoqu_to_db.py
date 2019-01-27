@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # read data from csv, write to mysql
@@ -11,8 +11,8 @@ from lib.city.city import *
 from lib.utility.date import *
 from lib.utility.version import PYTHON_3
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 pymysql.install_as_MySQLdb()
 
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         worksheet = workbook.add_worksheet()
     elif database == "sqlite":
         import sqlite3
-        con = sqlite3.connect('F:\ID\python\sqlite3\linajia.db')
+        con = sqlite3.connect('F:\ID\python\sqlite3\lipythontestdb')
         cur = con.cursor()
 
 
@@ -85,7 +85,7 @@ if __name__ == '__main__':
         print("{0} does not exist.".format(csv_dir))
         print("Please run 'python xiaoqu.py' firstly.")
         print("Bye.")
-        exit(0)
+        pythontestit(0)
     else:
         print('OK, start to process ' + get_chinese_city(city))
     for csv in os.listdir(csv_dir):
@@ -156,7 +156,7 @@ if __name__ == '__main__':
                     sale = str(sale)+'套在售'
                     price = str(price)+'元/m2'
                     Pricelist = (city.decode('utf8'), date.decode('utf8'), district.decode('utf8'), area.decode('utf8'), xiaoqu.decode('utf8'), price.decode('utf8'), sale.decode('utf8'), url.decode('utf8'))
-                    print type(Pricelist),Pricelist
+                    print(type(Pricelist),Pricelist)
                     sql = '''INSERT INTO xiaoqu (city, date, district, area, xiaoqu, price, sale, url) VALUES(?,?,?,?,?,?,?,?)'''
                     cur.execute(sql,Pricelist)
                     con.commit()

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pythontest
 # coding=utf-8
 # author: zengyuetian
 # read data from csv, write to mysql
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     if not os.path.exists(csv_dir):
         print("{0} does not exist.".format(csv_dir))
         print("Please run 'python xiaoqu.py' firstly.")
-        print("Bye.")
+        printpythontest")
         exit(0)
     else:
         print('OK, start to process ' + get_chinese_city(city))

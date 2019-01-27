@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # coding=utf-8
 # author: zengyuetian
 # 板块信息相关函数
@@ -9,8 +9,8 @@ from lib.const.request_headers import *
 from asn1crypto._ffi import null
 from asn1crypto.core import Null
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 def get_district_url(city, district):
     """

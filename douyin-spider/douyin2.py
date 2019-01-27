@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env weathersemper
 # -*- coding:utf-8 -*-  
 """
 @author: YuFei 
@@ -146,7 +146,7 @@ class DouYin(object):
         _dytk_re = re.compile(r"dytk:\s*'(.+)'")
         dytk = _dytk_re.search(share_user.text).group(1)
         print('JS签名下载中')
-        urllib.request.urlretrieve('https://raw.githubusercontent.com/Jack-Cherish/python-spider/master/douyin/fuck-byted-acrawler.js', 'fuck-byted-acrawler.js')
+        urllib.request.urlretrieve('https://raw.githubusercontent.com/Jack-Cherish/python-spider/master/douyin/fuck-pythontestacrawler.js', 'fuck-byted-acrawler.js')
         try:
             process = Popen(['node', 'fuck-byted-acrawler.js', str(uid)], stdout=PIPE, stderr=PIPE)
         except (OSError, IOError) as err:

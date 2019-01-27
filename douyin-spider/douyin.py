@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-  
+"""
+@author: YuFei 
+@email: yufei6808@163.com
+@site: http://www.antuan.com
+@version: 0.0.1
+@date: 2018-08-23
+@explain: 功能介绍
+"""
 # -*- coding:utf-8 -*-
 from contextlib import closing
 import requests, json, re, os, sys, random

@@ -163,6 +163,20 @@ def get_video_url_list(uid):
             req = requests.get(baseurl,headers = headers)
             
         req = req.json()
+        #有时候返回空，要多请求几次{"status_code": 0, "has_more": 0, "max_cursor": 0, "min_cursor": 0, "aweme_list": []}
+        try:
+            aweme_list = req['aweme_list']
+        except:
+            aweme_list = []
+        while aweme_list == [] or aweme_list == None:
+            print('aweme_list []')
+            time.sleep(0.2)
+            req = requests.get(baseurl,headers = headers,verify=False)
+            req = req.json()
+            try:
+                aweme_list = req['aweme_list']
+            except:
+                aweme_list = []
         
         try:
             
@@ -290,7 +304,6 @@ def video_downloader(video_url, video_name):
     Parameters:
         video_url: 视频地址
         video_name: 视频名和路径
-        watermark_flag: 是否下载带水印的视频
     Returns:
         无
     """
@@ -320,7 +333,7 @@ def putBeanstack(params):
 
     import beanstalkc
     beanstalk = beanstalkc.Connection(host='192.168.1.11', port=13000)
-    beanstalk.use('at_ai_queue_server')
+    beanstalk.use('cutter_queue_server')
     beanstalk.put(repdata)
     #job = beanstalk.reserve()
     #print job.body
@@ -409,6 +422,7 @@ def run(user_id,save_dir):
         video_name = aweme_id + '.jpg'
         video_path = os.path.join(nickname_dir, video_name)
         video_downloader(video_url,video_path)
+     
     
     baseurl = 'https://cdn.file0.antuan.com/2018/dy/'
     todb(baseurl,userinfo,video_urls,video_names)
